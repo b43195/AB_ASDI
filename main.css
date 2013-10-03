@@ -1,3 +1,54 @@
 /*Andisheh Bassiri
 ASDI
 1013*/
+html{
+	height: 100%;
+}
+body{
+	background-color: #99cc66;
+	height: 100%;
+}
+
+h1{
+	font-size: 40px;
+	color: #d2f4af;
+	text-align: center;
+	font-family: sans-serif;
+}
+
+h2{
+	color: #99cc66;
+	background-color: #d2f4af;
+	padding: 39px;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+p{
+	color: #d2f4af;
+	font-family: sans-serif;
+}
+
+.title{
+	margin-top: 25px;
+	margin-left: 46px;
+}
+
+.button{
+	display: block;
+	background-color: #d2f4af;
+	padding-top: 23px;
+	padding-bottom: 15px;
+	padding-left: 23px;
+	margin-top: 10px;
+}
+
+.vertbar{
+	display: block;
+	background-color: #d2f4af;
+	padding-top: 10px;
+	margin-top: 10px;	
+}
+.mainbuttons{
+	margin-top: 200px;
+}
