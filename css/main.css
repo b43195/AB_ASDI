@@ -4,10 +4,6 @@ ASDI
 html{
 	height: 100%;
 }
-body{
-	background-color: #99cc66;
-	height: 100%;
-}
 
 h1{
 	font-size: 40px;
@@ -30,6 +26,10 @@ p{
 }
 
 img{
+}
+
+input{
+	background-color: #99cc66
 }
 
 .title{
@@ -67,5 +67,9 @@ img{
 	background-color: #d2f4af;
 	padding-top: 10px;
 	margin-top: 10px;	
+}
+.page{
+	background-color: #99cc66;
+	height: 100%;
 }
 

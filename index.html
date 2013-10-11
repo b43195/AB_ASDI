@@ -1,4 +1,4 @@
-<!doctype html> 
+<!DOCTYPE html> 
 
 <!--Andisheh Bassiri_COURSE_MONTH, Assignment --> 
 
@@ -7,68 +7,206 @@
 
 	<meta charset="utf-8">
 	<meta name="description" content="Project Management Web Application"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<title>Project Manager</title>
+	<meta name="HandheldFriendly" content="True">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Multi-page template</title> 
+	<link rel="stylesheet" href="css/main.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 
-	<!-- Mobile IE needs ClearType for smoothing fonts -->
-	<meta http-equiv="cleartype" content="on">
-	
-	<!-- StyleSheets-->
-	<link rel="stylesheet" href="main.css" />
-	
-	<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
-	<script src="js/libs/modernizr.custom.min.js"></script>
-
-</head>
+</head> 
 <body>
 <!--HomePage-->
-	<div data-role="page" id="homepage">
-		<img src="images/nav.png"/>
-		<div class="title">
-			<img src="images/projectmanager.png"/>
-		</div>
-
-		<div data-role="content" >
-			<p>Create a new project to keep track of related tasks.</p>
-			<div class="mainbuttons">
-				<div class="vertbar"></div>
-				<div class="button">
-					<img src="images/newprojectBTN.png"/>
-				</div>
-				<div class="button">
-					<img src="images/projectsBTN.png"/>
-				</div>
-				<div class="vertbar"></div>
+	<div data-role="page" id="homepage" class="page">
+		<div class="page">
+			<img src="images/nav.png" style="width: 111px" id="nav"/>
+			<div class="title">
+				<img src="images/projectmanager.png"/>
 			</div>
-		</div>
-
-		<div data-role="footer" data-position="fixed" data-id="homePage">
-			<div data-role="navbar" class="ui-responsive-panel">
-				<ul>
-					<li><a href="#projPage" data-icon="search" data-iconpos="bottom">Projects</a></li>
-					<li><a href="#optionsPage "data-icon="info" data-iconpos="bottom">Options</a></li>
-				</ul>
+			<div data-role="content" >
+				<div class="mainbuttons">
+					<div class="vertbar"></div>
+					<div class="button" id="newProjPageBTN">
+						<img src="images/newprojectBTN.png" style="width: 200px"/>
+					</div>
+					<div class="button" id="projectsPageBTN">
+						<img src="images/projectsBTN.png" style="width: 135px"/>
+					</div>
+					<div class="vertbar"></div>
+				</div>
 			</div>
 		</div>
 	</div>
 
 <!--Project List-->
 	<div data-role="page" id="projectlist">
+		<div class="page">
+			<img src="images/nav.png" style="width: 111px"/>
+			<div data-role="content" >
+				<div class="projbuttons" style="overflow: hidden">
+					<div class="vertbar"></div>
+					<div class="button" style="float: left">
+						<img src="images/activeBTN.png"/ style="width: 85px; padding-right: 27px; padding-left: 27px">
+					</div>
+					<div class="button" style="float: left; margin-left: 10px">
+						<img src="images/completedBTN.png"/ style="width: 145px;  padding-right: 5px; padding-left: 5px">
+					</div>
+				</div>
+				<div class="vertbar"></div>
+				<div class="listback">
+					<ul>
+						<li>Hello</li>
+						<li>Hello</li>
+						<li>Hello</li>
+						<li>Hello</li>
+						<li>Hello</li>
+						<li>Hello</li>
+						<li>Hello</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
-
+<!--Add New Project-->
 	<div data-role="page" id="addproject">
-	</div>
+		<div class="page">
+			<img src="images/nav.png" style="width: 111px"/>
+			<div data-role="content" >
+				<div class="projbuttons">
+					<div class="vertbar"></div>
+					<div class="button">
+						<img src="images/newprojectBTN.png"/ style="width: 200px">
+					</div>
+				</div>
+				<div class="vertbar"></div>
+				<div class="listback" style="padding: 10px;padding-right: 15px">
+					<form action="" method="post" id="addPeepForm">
+								<div data-role="fieldcontain">
+									<label for"fname">First Name   *</label>
+									<input type="text" name="fname" id="fname" placeholder="First Name" class="required"/>
+								</div>
 
-	<div data-role="page" id="addtasks">
-	</div>
+								<div data-role="fieldcontain">
+									<label for"lname">Last Name   *</label>
+									<input type="text" name="lname" id="lname" placeholder="Last Name" class="required"/>
+								</div>
 
+								<div data-role="fieldcontain">
+									<label for"company">Company</label>
+									<input type="text" name="company "id="company" placeholder="Company Name"/>
+								</div>
+
+								<div data-role="fieldcontain">
+									<label for"pnum">Phone Number   *</label>
+									<input type="text" name="pnum" id="pnum" placeholder="XXX-XXX-XXXX" class="required"/>
+								</div>
+
+								<div data-role="fieldcontain">
+									<label for"email">E-Mail   *</label>
+									<input type="text" placeholder="peep@peepcheat.com" name="email" id="email" class="required email"/>
+								</div>
+
+								<div data-role="fieldcontain">
+									<label for"addy">Address</label>
+									<input type="text" name="addy" id="addy"/>	
+								</div>
+
+								<div data-role="fieldcontain">
+									<label for="bday">Birthday   *</label>
+									<input type="date" id="bday" value="1980-01-01" class="required"/>
+								</div>
+
+								<div data-role="fieldcontain">
+									<fieldset data-role="controlgroup">
+										<legend> Rock, Paper, Scissor?   *</legend>
+										<input type="checkbox" value="Rock" name="rps" id="rock" class="required" />
+										<label for="rock">Rock</label>
+										<input type="checkbox" value="Paper" name="rps" id="paper"/>
+										<label for="paper">Paper</label>
+										<input type="checkbox" value="Scissor" name="rps" id="scissor" />
+										<label for="scissor">Scissor</label>
+									</fieldset>
+								</div>
+
+								<div data-role="fieldcontain">
+									<label for"donor">Organ Donor?</label>
+									<select data-role="slider" name="donor" id="donor">
+										<option value="off">No</option>
+										<option value="on">Yes</option>
+									</select>
+								</div>
+
+								<div data-role="fieldcontain">
+								<label for="soa">Scale of Awesomeness </label>
+								<input type="range" name="soa" id="soa" min="1" max="10" value="5">
+								</div>
+
+								<div data-role="fieldcontain">
+									<label for="cat">Category   *</label>
+									<select name="cat" id="cat" class="required">
+										<option data-placeholder="true">Select Category</option>
+										<option value="Friend">Friend</option>
+										<option value="Family">Family</option>
+										<option value="Co-Worker">Co-Worker</option>
+										<option value="Frienemy">Frienemy</option>
+										<option value="Aquentence">Aquentence</option>
+									</select>
+								</div>
+
+								<div data-role="fieldcontain">
+									<label for="quotes">Best Quotes </label>
+									<textarea name="quotes" id="quotes" placeholder='"I wish my name was Press Firmly..."'></textarea>
+								</div>
+
+								<div data-role="fieldcontain">
+									<label for="notes">Notes </label>
+									<textarea name="notes" id="notes" placeholder="-really likes cheese"></textarea>
+								</div>
+					<input type="submit" id="addPeep" value="Add Peep!" data-theme="b"/>
+					<input type="reset" value="Reset">
+				</form>
+				</div>
+			</div>
+
+			<div data-role="footer" data-position="fixed" data-id="homePage">
+				<div data-role="navbar" class="ui-responsive-panel">
+				</div>
+			</div>
+		</div>
+	</div>
+<!--Setting Page-->
 	<div data-role="page" id="settings">
+		<div class="page">
+			<img src="images/nav.png" style="width: 111px"/>
+			<div data-role="content" >
+				<div class="projbuttons">
+					<div class="vertbar"></div>
+					<div class="button">
+						<img src="images/settingsBTN.png"/ style="width: 120px">
+					</div>
+				</div>
+				<div class="vertbar"></div>
+				<div class="listback">
+					<ul>
+						<li>Hello</li>
+						<li>Hello</li>
+						<li>Hello</li>
+						<li>Hello</li>
+						<li>Hello</li>
+						<li>Hello</li>
+						<li>Hello</li>
+					</ul>
+				</div>
+			</div>
+
+			<div data-role="footer" data-position="fixed" data-id="homePage">
+				<div data-role="navbar" class="ui-responsive-panel">
+				</div>
+			</div>
+		</div>
 	</div>
-<!-- Scripts -->
-			<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-			<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
-			<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
-			<script type="text/javascript" src="js/main.js"></script>
-			
-	</body>
+	<script type="text/javascript" src="js/main.js"></script>
+	
+</body>
 </html>
