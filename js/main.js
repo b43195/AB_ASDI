@@ -5,13 +5,24 @@ var say = function(message){
 
 $("#homepage").on("pageinit", function(){
 
-	$("#newProjPageBTN").on("click", function(){
-	});
+});
 
-	$("#projectsPageBTN").on("click", function(){
-	});
+$("#addproject").on("pageinit", function(){
+	/*$("#addprojform").validate({
+		invalidHandler: function(form, validator){},
+		submitHandler:function(){
+			var projdata = addprojform.serializeArray();
+			parsePeepForm(peepData);
+		}
+	});*/
+//add validator plug in to JS folder
+});
 
-	$("#nav").on("click", function(){
-	});
+$("#projectlist").on("pageinit", function(){
+	//write JSON and XML data
+	// populate list items based on active or complete
+});
 
+$("#settings").on("pageinit", function(){
+	//write clear storage call
 });

@@ -9,7 +9,7 @@
 	<meta name="description" content="Project Management Web Application"/>
 	<meta name="HandheldFriendly" content="True">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Multi-page template</title> 
+	<title>Project</title> 
 	<link rel="stylesheet" href="css/main.css" />
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
@@ -20,7 +20,6 @@
 <!--HomePage-->
 	<div data-role="page" id="homepage" class="page">
 		<div class="page">
-			<img src="images/nav.png" style="width: 111px" id="nav"/>
 			<div class="title">
 				<img src="images/projectmanager.png"/>
 			</div>
@@ -40,33 +39,40 @@
 					<div class="vertbar"></div>
 				</div>
 			</div>
+			<div data-role="footer" id="footer" data-position="fixed" class="ui-bar">
+				<div data-role="navbar">
+					<ul>
+						<li><a href="#settings">Settings</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 
 <!--Project List-->
 	<div data-role="page" id="projectlist">
 		<div class="page">
-			<img src="images/nav.png" style="width: 111px"/>
+			<img src="images/nav.png" style="width: 111px" id="nav"/>
 			<div data-role="content" >
 				<div class="projbuttons" style="overflow: hidden">
 					<div class="vertbar"></div>
 					<div class="button" style="float: left">
-						<img src="images/activeBTN.png"/ style="width: 85px; padding-right: 27px; padding-left: 27px">
+						<img src="images/activeBTN.png"/ style="width: 85px; padding-right: 20px; padding-left: 20px">
 					</div>
 					<div class="button" style="float: left; margin-left: 10px">
 						<img src="images/completedBTN.png"/ style="width: 145px;  padding-right: 5px; padding-left: 5px">
 					</div>
 				</div>
-				<div class="vertbar"></div>
-				<div class="listback">
-					<ul>
-						<li>Hello</li>
-						<li>Hello</li>
-						<li>Hello</li>
-						<li>Hello</li>
-						<li>Hello</li>
-						<li>Hello</li>
-						<li>Hello</li>
+				<div class="vertbar" style="background-color: #99cc66; margin-top: 0px"></div>
+				<div>
+					<ul data-role="listview" data-inset="true" id="projList">
+						<li>Andy</li>
+						<li>Andy</li>
+						<li>Andy</li>
+						<li>Andy</li>
+						<li>Andy</li>
+						<li>Andy</li>
+
 					</ul>
 				</div>
 			</div>
@@ -75,7 +81,7 @@
 <!--Add New Project-->
 	<div data-role="page" id="addproject">
 		<div class="page">
-			<img src="images/nav.png" style="width: 111px"/>
+			<!-- <img src="images/nav.png" style="width: 111px"/> -->
 			<div data-role="content" >
 				<div class="projbuttons">
 					<div class="vertbar"></div>
@@ -125,17 +131,12 @@
 				</form>
 				</div>
 			</div>
-
-			<div data-role="footer" data-position="fixed" data-id="homePage">
-				<div data-role="navbar" class="ui-responsive-panel">
-				</div>
-			</div>
 		</div>
 	</div>
 <!--Setting Page-->
 	<div data-role="page" id="settings">
 		<div class="page">
-			<img src="images/nav.png" style="width: 111px"/>
+			<!-- <img src="images/nav.png" style="width: 111px"/> -->
 			<div data-role="content" >
 				<div class="projbuttons">
 					<div class="vertbar"></div>
@@ -158,12 +159,11 @@
 			</div>
 
 			<div data-role="footer" data-position="fixed" data-id="homePage">
-				<div data-role="navbar" class="ui-responsive-panel">
-				</div>
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="js/main.js"></script>
+
+<script type="text/javascript" src="js/main.js"></script>
 	
 </body>
 </html>
